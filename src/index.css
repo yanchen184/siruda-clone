@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 p-0 bg-white text-dark font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-primary text-white font-medium rounded-sm
+           transition-all duration-300 hover:bg-primary-dark hover:scale-105;
+  }
+
+  .nav-link {
+    @apply text-dark hover:text-primary transition-colors duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-heading text-dark mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-dark-light mb-8;
+  }
+}
+
+@layer utilities {
+  .skew-bg {
+    transform: skew(-17deg, 0deg);
+  }
+}
